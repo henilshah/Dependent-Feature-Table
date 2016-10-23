@@ -1,0 +1,10 @@
+/----Dependent Checkboxes-------/
+ 
+Imagine you are given a project requirement that asks you to implement a user interface for managing the privacy settings of certain features in the product. The requirement is for you to manage these settings in a table, where each row of the table reflects the privacy settings for a particular feature. Each row is made up of a first column containing the name of the feature and the subsequent columns represent the privacy levels   of the feature. Each of these subsequent columns contains a single checkbox where the user can select the privacy level defined by that column. If there are three privacy levels, then each row would have 4 columns, the first of which contains the feature's label and each of the remaining three are used to select their respective privacy level using the checkbox contained within. The checkboxes must conform to two rules:
+ 
+a) When a checkbox in a row becomes checked, it must check the checkboxes to the right of itself.
+b) When a checkbox in a row becomes unchecked, it must uncheck the checkboxes to the left of itself.
+ 
+In other words, all privacy levels to the right of a user’s selection are subsumed by the selected privacy level. It may be helpful to think about this as there being a inclusive dependency on the privacy levels whereby a checkbox toward the right is more restrictive and a checkbox toward the left is less restrictive.
+ 
+Your task is to implement this functionality such that it can handle an arbitrary number of features and an arbitrary number of security levels. First, construct an html table that captures the structure outlined. As sample cases create a table with three privacy levels and a table with ten privacy levels. Second, using jQuery (or another framework, or no framework), construct the javascript necessary to enforce the checkbox logic outlined in rules 1) and 2). Last, add a button at the bottom of each table, that when clicked, reports to the console the selected privacy level of each feature as an integer value representing the position of the checkbox in the row.
